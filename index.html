@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustentabilidade Hídrica no Campo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Gota Cultivada</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#calculadora">Impacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>O Futuro da Agricultura de Precisão</h1>
+            <p>O equilíbrio sutil entre a abundância do campo e a preservação do nosso recurso mais precioso.</p>
+            <a href="#pilares" class="btn">Explore as Soluções</a>
+        </div>
+    </section>
+
+    <section id="pilares" class="features">
+        <h2 class="section-title">Práticas Essenciais</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Captação de Chuva</h3>
+                <p>Sistemas avançados de cisternas e barragens subterrâneas para reter a água das precipitações e utilizá-la nos períodos de estiagem.</p>
+            </div>
+            <div class="card">
+                <h3>Irrigação Eficiente</h3>
+                <p>Adoção do gotejamento e microaspersão, direcionando a água diretamente à raiz das plantas, reduzindo o desperdício por evaporação.</p>
+            </div>
+            <div class="card">
+                <h3>Manejo do Solo</h3>
+                <p>Técnicas como o plantio direto e a cobertura morta ajudam a manter a umidade natural da terra, demandando menos intervenções.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="tech-section">
+        <h2 class="section-title">Tecnologia Aplicada</h2>
+        <div class="tech-container">
+            <div class="tech-menu">
+                <button class="tech-btn active" data-target="sensor">Sensores de Solo</button>
+                <button class="tech-btn" data-target="reuso">Reuso de Efluentes</button>
+                <button class="tech-btn" data-target="ia">IA e Climatologia</button>
+            </div>
+            <div class="tech-content">
+                <div id="sensor" class="tech-pane active">
+                    <h3>Sensores de Umidade de Última Geração</h3>
+                    <p>Dispositivos cravados no solo enviam dados em tempo real sobre a real necessidade hídrica da planta, evitando o super-esquema de irrigação e economizando até 40% de água.</p>
+                </div>
+                <div id="reuso" class="tech-pane">
+                    <h3>Tratamento e Reuso de Efluentes</h3>
+                    <p>Processos biológicos e de filtragem que transformam resíduos líquidos da produção agropecuária em água segura para fertirrigação, fechando o ciclo de consumo.</p>
+                </div>
+                <div id="ia" class="tech-pane">
+                    <h3>Inteligência Artificial Climatológica</h3>
+                    <p>Algoritmos cruzam dados de satélites e previsões do tempo locais para calibrar automaticamente os sistemas de irrigação, antecipando chuvas e economizando recursos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="interactive-section">
+        <div class="calc-box">
+            <h2>Simulador de Economia Hídrica</h2>
+            <p>Descubra o impacto estimado ao migrar da irrigação por inundação/aspersão tradicional para o sistema de gotejamento.</p>
+            
+            <div class="input-group">
+                <label for="hectares">Tamanho da Área Cultivada (em hectares):</label>
+                <input type="number" id="hectares" min="1" placeholder="Ex: 10">
+            </div>
+            <button id="btn-calcular" class="btn">Calcular Economia Anual</button>
+            
+            <div id="resultado" class="result-box hidden">
+                <p>Sua economia estimada de água será de:</p>
+                <span id="litros-economizados">0</span> Litros
+                <p class="sub-result">Além de reduzir drasticamente a pegada de carbono do bombeamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gota Cultivada. Desenvolvido com foco no futuro sustentável do campo.</p>
+    </footer>
+
+    <script href="script.js"></script>
+</body>
+</html>
