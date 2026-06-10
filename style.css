@@ -1,0 +1,342 @@
+/* Definições Gerais e Paleta de Cores (Preto/Grafite) */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #121212;
+    --bg-card: #1a1a1a;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --accent: #e5e5e5;
+    --border-color: #2c2c2c;
+    --font-titles: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+header .logo {
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 35px;
+}
+
+header nav ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--text-main);
+}
+
+/* Seção Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+}
+
+.hero-content h1 {
+    font-family: var(--font-titles);
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+    font-weight: 300;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Títulos de Seção */
+.section-title {
+    font-family: var(--font-titles);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 400;
+}
+
+/* Seção de Pilares (Cards) */
+.features {
+    padding: 100px 8%;
+    background-color: var(--bg-primary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    border-color: #555;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-family: var(--font-titles);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+/* Seção de Abas Tecnológicas */
+.tech-section {
+    padding: 100px 8%;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tech-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.tech-menu {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.tech-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    text-align: left;
+    padding: 15px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: color 0.3s, padding-left 0.3s;
+}
+
+.tech-btn:hover, .tech-btn.active {
+    color: var(--text-main);
+    padding-left: 10px;
+}
+
+.tech-content {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.tech-pane {
+    display: none;
+}
+
+.tech-pane.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.tech-pane h3 {
+    font-family: var(--font-titles);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.tech-pane p {
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Seção Interativa / Calculadora */
+.interactive-section {
+    padding: 100px 8%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-primary);
+}
+
+.calc-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 50px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.calc-box h2 {
+    font-family: var(--font-titles);
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.calc-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #777;
+}
+
+.result-box {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    animation: fadeIn 0.4s ease;
+}
+
+.result-box.hidden {
+    display: none;
+}
+
+#litros-economizados {
+    font-family: var(--font-titles);
+    font-size: 3rem;
+    display: block;
+    margin: 10px 0;
+    color: var(--text-main);
+}
+
+.sub-result {
+    font-size: 0.85rem !important;
+    font-style: italic;
+}
+
+/* Rodapé */
+footer {
+    padding: 40px 8%;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+footer p {
+    color: #555;
+    font-size: 0.85rem;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade Básica */
+@media(max-width: 768px) {
+    header { padding: 20px 5%; flex-direction: column; gap: 15px; text-align: center; }
+    header nav ul li { margin: 0 15px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .tech-container { flex-direction: column; gap: 30px; }
+    .tech-menu { width: 100%; }
+    .tech-content { width: 100%; }
+}
